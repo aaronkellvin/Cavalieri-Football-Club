@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <link rel="stylesheet" type="text/css" href="style.css">
+   <title>Home</title>
+</head>
+<style>
+*{
+            padding: 0;
+            margin: 0;
+            font-family: sans-serif;
+        }
+       .banner{
+            width: 100%;
+            height: 100vh;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(D:/cavbg.jpg);
+            background-size: cover;
+            background-position: center;
+       }
+       .navibar
+       {
+        width: 85%;
+        margin: auto;
+        padding: 35;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+       }
+       a{
+        font-family: Arial, sans-serif;
+            font-size: 20px;
+            font-weight: bold;
+            font-style: italic;
+            color: white;
+       }
+       .logo{
+        width: 120px;
+        cursor:pointer;
+       }
+       .navibar ul li{
+        list-style: none;
+        display: inline-block;
+        margin: 0 20px;
+        color: white;
+       }
+        .navibar ul li{
+        text-decoration: none;
+        color: white;
+        text-transform: uppercase;
+       }
+         .navibar ul li::after{
+        content: '';
+        height: 3px;
+        width: 100%;
+        background: white;
+        background-position: absolute;
+        left: 0;
+        bottom: -10px;
+        transition: 0.5s;
+       }
+        .navibar ul li:hover::after{
+            width: 100%;
+        }
+        .content{
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            text-align: center;
+            color: #fff;
+        }
+        .content h1{
+            font-size: 70px;
+            margin-top: 80px;
+        }
+        .content p{
+            margin: 20px auto;
+            font-weight: 100;
+            line-height: 25px;
+        }
+        button{
+            width: 200px;
+            padding: 15px 0;
+            text-align: center;
+            margin: 20px 10px;
+            border-radius: 25px;
+            font-weight: bold;
+            border:2px solid yellow;
+            background: transparent;
+            color: #fff;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        span{
+            background: #009688
+            height: 100%;
+            width: 100; 
+            border-radius: 25px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            z-index: -1;
+            transition: 0.5s;
+        }
+        button:hover span{
+            width: 100%;
+
+        }
+        button:hover{
+            border: none;
+        }
+</style>
+
+<body>
+
+<div class= "banner">
+    <div class= "navibar">
+        <img src = "D:/pain.gif"/>
+        <ul>
+            <li><a href = "index.html">Home</a></li>
+            <li><a href = "cavalieri2.html">About Us</a></li>
+            <li><a href = "cavalieri.html">Registration</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <h1>WELCOME TO CAVALIERI FOOTBALL CLUB</h1>
+        <p>If you're one of the aspiring football players who wants to explore and learn football, <br>Register Now and don't forget to like and follow our Facebook page for more updates!<br> Just click Facebook button below <br></p>
+        
+        <div>
+            <button type="button"><a href = "cavalieri.html"><span></span>Join Now</a></button>
+            <button id="fb"><span></span>Visit Facebook Page</button>
+        </div>
+    </div>
+</div>
+<script>
+    document.getElementById('fb').addEventListener('click', function() {
+        
+        var facebookPageUrl = 'https://www.facebook.com/CFA2019';
+        
+        
+        window.open(facebookPageUrl, '_blank');
+    });
+</script>
+
+    </body>
+
+    </html>
